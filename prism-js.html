@@ -223,24 +223,7 @@ Specify a language and theme:
           this.$.codeviewer.innerHTML = this.innerHTML;
           Prism.highlightElement(this.$.codeviewer);
 
-          this.injectTheme();
           this.injectPluginStylesheets();
-        },
-
-        /**
-        * The `injectTheme` method dynamically injects a stylesheet for
-        * themining based on the `theme` attribute.
-        *
-        * @method injectTheme
-        */
-        injectTheme: function () {
-          var cssFile;
-          if (this.theme.length > 0) {
-            cssFile = '../prismjs/prism-' + this.theme + '.css';
-          } else {
-            cssFile = '../prismjs/prism.css';
-          }
-          this.injectStylesheet(cssFile);
         },
 
         injectPluginStylesheets: function () {
